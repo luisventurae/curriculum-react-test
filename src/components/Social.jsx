@@ -6,8 +6,8 @@ const Social = props => {
             {props.social &&
                 <ul>
                     {props.social.map((social, index) => (
-                        <li key={`Social-${index}`} target="_blank" >
-                            <a href={social.url} >
+                        <li key={`Social-${index}`} >
+                            <a href={social.url} target="_blank" >
                                 {social.name}
                             </a>
                         </li>

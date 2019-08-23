@@ -14,7 +14,7 @@ import useGetData from '../hooks/useGetData'
 
 const App = () => {
     const data = useGetData()
-    console.log(data)
+    // console.log(data)
 
     return data.length === 0 ? <h1>Cargando...</h1> : (
         <Main>
