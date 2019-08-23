@@ -1,26 +1,20 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-class TestHooks extends Component {
-    state = {
-        active: true,
+const TestHooks = () => {
+    const [ active, setActive ] = useState(true) // Le paso a active el valor inicial de true
+
+    const handleClick = () => {
+        setActive(!active) // Cambia el estado de active
     }
 
-    handleClick = () => {
-        this.setState({
-            active: !this.state.active
-        })
-    }
-
-    render() {
-        return(
-            <div>
-                <button onClick={this.handleClick} >Ocultar</button>                
-                {this.state.active &&
-                    <h1>Hola Mundo!</h1>
-                }
-            </div>
-        )
-    }
+    return(
+        <div>
+            <button onClick={ handleClick } >Ocultar</button>
+            {active &&
+                <h1>Hello World 2!</h1>
+            }
+        </div>
+    )
 }
 
 export default TestHooks
