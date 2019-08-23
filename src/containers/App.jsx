@@ -5,7 +5,7 @@ import Sidebar from '../components/Sidebar'
 import Info from '../components/Info'
 import About from '../components/About'
 // Importando componentes especificos de información
-import Educaction from '../components/Educaction'
+import Education from '../components/Education'
 import Experience from '../components/Experience'
 import Certificates from '../components/Certificates'
 import Skills from '../components/Skills'
@@ -17,7 +17,7 @@ const App = () => {
                 <About />
             </Sidebar>
             <Info>
-                <Educaction />
+                <Education />
                 <Experience />
                 <Certificates />
                 <Skills />
