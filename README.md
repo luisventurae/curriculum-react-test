@@ -1,2 +1,0 @@
-# curriculum
-Project based ReactJs
