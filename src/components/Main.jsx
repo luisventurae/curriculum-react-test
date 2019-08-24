@@ -13,6 +13,10 @@ const MainContainer = styled.div`
     grid-template-columns: 1fr 3fr;
     grid-gap: 2rem;
     grid-row-gap: 0.5em;
+
+    @media only screen and  (max-width: 737px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const Main = ({ children }) => { // children son los componentes hijos, osea: siderbar e info, segun App.jsx
