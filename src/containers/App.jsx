@@ -1,4 +1,8 @@
 import React from 'react'
+// Importando ReactHooks para obtener data
+import useGetData from '../hooks/useGetData'
+// Importando para uso de estilos globales
+import { createGlobalStyle } from 'styled-components'
 // Importando componentes principales
 import Main from '../components/Main'
 import Sidebar from '../components/Sidebar'
@@ -9,8 +13,15 @@ import Education from '../components/Education'
 import Experience from '../components/Experience'
 import Certificates from '../components/Certificates'
 import Skills from '../components/Skills'
-// Importando ReactHooks para obtener data
-import useGetData from '../hooks/useGetData'
+
+const GlobalStyle = createGlobalStyle`
+    body {
+        font-family: 'Lato', sans-sarif;
+        margin 0;
+        padding: 0;
+        background: #F5F5F5;
+    }
+`
 
 const App = () => {
     const data = useGetData()
@@ -18,6 +29,7 @@ const App = () => {
 
     return data.length === 0 ? <h1>Cargando...</h1> : (
         <Main>
+            <GlobalStyle />                
             <Sidebar>
                 <About 
                     avatar = { data.avatar }
